@@ -61,11 +61,11 @@
         }
       }
 
-      $this->stmt->bindValues($param, $values, $type);
+      $this->stmt->bindValue($param, $value, $type);
     }
 
     // Execute the prepared statement
-    private function execute() {
+    public function execute() {
       return $this->stmt->execute();
     }
 
