@@ -7,6 +7,7 @@
 
      $data = [
        'title' => 'SharePost',
+       'description' => 'Simple social network built on the PHP-MVC framework.'
       ];
 
      
@@ -14,7 +15,10 @@
    }
 
    public function about() {
-    $data = ['title' => 'About Us'];
+    $data = [
+      'title' => 'About Us',
+      'description' => 'App to share posts with other users.'
+    ];
 
     $this->view('pages/about', $data);
    }
