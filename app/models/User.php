@@ -57,4 +57,16 @@
       // email is valid
       return false;
     }
+
+    // find user by id
+    public function getUserById($id) {
+      $this->db->query("SELECT * FROM users WHERE id = :id");
+      $this->db->bind(':id', $id);
+
+      // data
+      $row = $this->db->single();
+
+      return $row;
+    }
+
   }
